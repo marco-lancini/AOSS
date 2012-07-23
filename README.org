@@ -1,20 +1,62 @@
 * AOSS
 
-
-descrizione dal pdf
 per il progetto di Image Analysis
 
+Il prodotto finale è AOSS (Android-OpenCV Sound Synthesizer), un’ap-
+plicazione Android che sfrutta le librerie OpenCV per determinare la di-
+stanza tra due oggetti ripresi dalla videocamera del telefono, distanza che
+andrà poi a modulare la frequenza del suono prodotto dal sintetizzatore
+audio inglobato nell’applicazione stessa.
 
-formato da 2 parti
+Con AOSS (Android-OpenCV Sound Synthesizer) si è voluto tentare di
+catturare il potenziale offerto dall’unione di Android con le librerie OpenCV,
+due strumenti open source che permettono una grande libertà di utiliz-
+zo. Lo scopo è stato infatti quello di utilizzare l’output di un processo di Computer Vision, come la distanza tra due oggetti ripresi dal telefono, co-
+me input per un successivo processo di manipolazione audio, quale è un
+sintetizzatore di suoni.
+
+---------------------
+
+
+Dato come input un video acquisito in real time dalla videocamera del
+telefono che mostra una superficie bianca (ad esempio un tavolo) con al di
+sopra due oggetti scuri, il sistema deve identificare tali oggetti e usare la
+loro distanza per modulare la frequenza del suono prodotto dal sintetizza-
+tore.
+L’utente ha la possibilità di muovere gli oggetti e vedere come ciò si ri-
+specchia nell’output: l’immagine delle sue mani viene ignorata e il sistema
+mostra in tempo reale l’aggiornamento della posizione dei centri dei due
+oggetti, oltre a variare la frequenza del suono prodotto.
+Per permettere una risoluzione ottimale del problema ed ottenere l’ap-
+plicazione finale, si è quindi deciso di suddividere il processo in tre parti.
+Si è innanzitutto implementato un modulo di Computer Vision in grado di
+riconoscere gli oggetti e la loro distanza, per poi creare una applicazione
+Android che integra tale modulo, ed infine si è realizzato un semplice sin-
+tetizzatore audio per tale applicazione che prende come input l’output del
+modulo di Computer Vision.
+
+
 
 
 ** Computer Vision Module
+
+OpenCV native interface
+
+usare un video come input
+
+[[www.marcolancini.it/images/projects/aoss/activity_cv.png]]
+images/projects/aoss/screenshot.png
+
+
+
 descrizione
 	indipendente
 funzionamento
 
-example_input_video.AVI
+
 example_output.flv
+
+AOSS_Vision_Module.cpp
 
 
 **** Prerequisites: *OpenCV 2.3.1*
@@ -26,10 +68,32 @@ example_output.flv
 g++ AOSS_Vision_Module.cpp -o AOSS_Vision_Module `pkg-config --cflags --libs opencv`
 #+END_SRC
 
+**** Usage:
+#+BEGIN_SRC sh
+./AOSS_Vision_Module example_input_video.AVI
+#+END_SRC
+
 
 
 ** Android App
 descrizione dal pdf
+
+AOSS offre all’utente due modalità di utilizzo, raggiungibili tramite un
+apposito menu (Figura 2.10a):
+• Sound Synthesizer - OFF: disabilita le funzionalità di AOSS e mostra
+solo quanto ripreso dalla camera, senza nessuna manipolazione (Fi-
+gura 2.10b). Nessun suono viene prodotto
+• Sound Synthesizer - ON: l’immagine ripresa dalla camera viene inoltra-
+ta alla logica di Computer Vision che la manipola, identifica i centri
+degli oggetti e aggiorna il suono del sintetizzatore (Figura 2.10c)
+Per entrambe le modalità di utilizzo è stata aggiunta la possibilità di ve-
+dere in tempo reale la reattività dell’applicazione tramite un comodo con-
+tatore, sovrapposto all’immagine, che utilizza come metro di giudizio il
+numero di frame analizzati al secondo (Frame Per Second, FPS).
+
+
+images/projects/aoss/activity_app.png
+
 
 AOSS/
 codice sorgente
