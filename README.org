@@ -2,17 +2,19 @@
 
 
 descrizione dal pdf
-
+per il progetto di Image Analysis
 
 
 formato da 2 parti
 
 
 ** Computer Vision Module
-
+descrizione
 	indipendente
+funzionamento
 
-
+example_input_video.AVI
+example_output.flv
 
 
 **** Prerequisites: *OpenCV 2.3.1*
@@ -27,3 +29,10 @@ g++ AOSS_Vision_Module.cpp -o AOSS_Vision_Module `pkg-config --cflags --libs ope
 
 
 ** Android App
+descrizione dal pdf
+
+AOSS/
+codice sorgente
+
+AOSS.apk
+app
