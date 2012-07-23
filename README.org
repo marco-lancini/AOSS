@@ -44,7 +44,7 @@ OpenCV native interface
 
 usare un video come input
 
-[[www.marcolancini.it/images/projects/aoss/activity_cv.png]]
+[[http://www.marcolancini.it/images/projects/aoss/activity_cv.png]]
 images/projects/aoss/screenshot.png
 
 
