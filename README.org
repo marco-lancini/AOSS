@@ -15,11 +15,11 @@ formato da 2 parti
 
 *** Compilation
 
-Prerequisites: *OpenCV 2.3.1*
-**** official site: http://opencv.willowgarage.com/wiki/Welcome
-**** installation guide: http://www.marcolancini.it/other/opencv_install_231.php
+**** Prerequisites: *OpenCV 2.3.1*
+***** official site: http://opencv.willowgarage.com/wiki/Welcome
+***** installation guide: http://www.marcolancini.it/other/opencv_install_231.php
    
-Compilation:
+**** Compilation:
 #+BEGIN_SRC sh
 g++ AOSS_Vision_Module.cpp -o AOSS_Vision_Module `pkg-config --cflags --libs opencv`
 #+END_SRC
