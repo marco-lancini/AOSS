@@ -1,62 +1,28 @@
 * AOSS
 
-per il progetto di Image Analysis
+AOSS (Android-OpenCV Sound Synthesizer) is an Android app, developed for the Image Analysis course at [[http://www.polimi.it][Politecnico di Milano]], that uses the OpenCV libraries to determine the distance between two objects taken by the camera of the phone; distance which will modulate the frequency of the sound produced by the audio synthesizer embedded into the application. The aim was indeed to use the output of a process of Computer Vision, as the distance between two objects taken from the device, as input to a subsequent process of audio manipulation, which is an audio synthesizer.
 
-Il prodotto finale è AOSS (Android-OpenCV Sound Synthesizer), un’ap-
-plicazione Android che sfrutta le librerie OpenCV per determinare la di-
-stanza tra due oggetti ripresi dalla videocamera del telefono, distanza che
-andrà poi a modulare la frequenza del suono prodotto dal sintetizzatore
-audio inglobato nell’applicazione stessa.
-
-Con AOSS (Android-OpenCV Sound Synthesizer) si è voluto tentare di
-catturare il potenziale offerto dall’unione di Android con le librerie OpenCV,
-due strumenti open source che permettono una grande libertà di utiliz-
-zo. Lo scopo è stato infatti quello di utilizzare l’output di un processo di Computer Vision, come la distanza tra due oggetti ripresi dal telefono, co-
-me input per un successivo processo di manipolazione audio, quale è un
-sintetizzatore di suoni.
-
----------------------
-
-
-Dato come input un video acquisito in real time dalla videocamera del
-telefono che mostra una superficie bianca (ad esempio un tavolo) con al di
-sopra due oggetti scuri, il sistema deve identificare tali oggetti e usare la
-loro distanza per modulare la frequenza del suono prodotto dal sintetizza-
-tore.
-L’utente ha la possibilità di muovere gli oggetti e vedere come ciò si ri-
-specchia nell’output: l’immagine delle sue mani viene ignorata e il sistema
-mostra in tempo reale l’aggiornamento della posizione dei centri dei due
-oggetti, oltre a variare la frequenza del suono prodotto.
-Per permettere una risoluzione ottimale del problema ed ottenere l’ap-
-plicazione finale, si è quindi deciso di suddividere il processo in tre parti.
-Si è innanzitutto implementato un modulo di Computer Vision in grado di
-riconoscere gli oggetti e la loro distanza, per poi creare una applicazione
-Android che integra tale modulo, ed infine si è realizzato un semplice sin-
-tetizzatore audio per tale applicazione che prende come input l’output del
-modulo di Computer Vision.
+Given as input a real-time video captured by the camera of the phone that shows a white surface (eg a table) and to the above two dark objects, the system must identify these objects and use the distance between them to modulate the frequency of the sound produced by the synthesizer. Moreover, the user has the ability to move objects and see how this is reflected in the output: the image of his hands is ignored and the system displays real-time updating of the position of the centers of two objects, in addition to varying the frequency of the sound produced.
 
 
 
 
 ** Computer Vision Module
 
-OpenCV native interface
+The base of AOSS is a Computer Vision module able to recognize objects and their distance. It's totally auto-contained and can be used as a desktop script, independent from the app.
 
-usare un video come input
+In the _vision_module_ folder there's the source code of this module, equipped with a pre-recorded video that can be used as input for the script (if you want you can just record your own video), and another video that shows the script running.
 
+****** Activity Diagram
 [[http://www.marcolancini.it/images/projects/aoss/activity_cv.png]]
-images/projects/aoss/screenshot.png
+
+****** Screenshot of the running script
+[[http://www.marcolancini.it/images/projects/aoss/screenshot.png]]
 
 
 
-descrizione
-	indipendente
-funzionamento
 
 
-example_output.flv
-
-AOSS_Vision_Module.cpp
 
 
 **** Prerequisites: *OpenCV 2.3.1*
@@ -77,6 +43,10 @@ g++ AOSS_Vision_Module.cpp -o AOSS_Vision_Module `pkg-config --cflags --libs ope
 
 ** Android App
 descrizione dal pdf
+
+per poi creare una applicazione Android che integra tale modulo, ed infine si è realizzato un semplice sin-
+tetizzatore audio per tale applicazione che prende come input l’output del modulo di Computer Vision.
+
 
 AOSS offre all’utente due modalità di utilizzo, raggiungibili tramite un
 apposito menu (Figura 2.10a):
