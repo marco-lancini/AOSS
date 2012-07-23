@@ -15,7 +15,7 @@ Moreover, the user has the ability to move objects and see how this is reflected
 
 The base of AOSS is a Computer Vision module able to recognize objects and their distance. It's totally auto-contained and can be used as a desktop script, independent from the app.
 
-In the _vision_module_ folder there's the source code of this module, equipped with a pre-recorded video that can be used as input for the script (if you want you can just record your own video), and another video that shows the script running.
+In the *vision_module* folder there's the source code of this module, equipped with a pre-recorded video that can be used as input for the script (if you want you can just record your own video), and another video that shows the script running.
 
 ****** Activity Diagram
 [[http://www.marcolancini.it/images/projects/aoss/activity_cv.png]]
