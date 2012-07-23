@@ -13,11 +13,11 @@ formato da 2 parti
 	indipendente
 
 
-*** Compilation
+
 
 **** Prerequisites: *OpenCV 2.3.1*
-***** official site: http://opencv.willowgarage.com/wiki/Welcome
-***** installation guide: http://www.marcolancini.it/other/opencv_install_231.php
+****** official site: http://opencv.willowgarage.com/wiki/Welcome
+****** installation guide: http://www.marcolancini.it/other/opencv_install_231.php
    
 **** Compilation:
 #+BEGIN_SRC sh
