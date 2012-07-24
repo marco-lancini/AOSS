@@ -61,3 +61,8 @@ In the *android_app* folder there's the source code of the app and the pre-compi
 ****** Screenshots
 [[http://www.marcolancini.it/images/projects/aoss/app_menu.png]] [[http://www.marcolancini.it/images/projects/aoss/app_on.png]]
 
+
+** Copyright and License
+copyright 2012 Marco Lancini
+
+Licensed under the MIT License.
