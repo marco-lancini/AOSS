@@ -63,6 +63,6 @@ In the *android_app* folder there's the source code of the app and the pre-compi
 
 
 ** Copyright and License
-copyright 2012 Marco Lancini
+Copyright 2012 Marco Lancini.
 
 Licensed under the MIT License.
