@@ -18,10 +18,10 @@ The base of AOSS is a Computer Vision module able to recognize objects and their
 In the *vision_module* folder there's the source code of this module, equipped with a pre-recorded video that can be used as input for the script (if you want you can just record your own video), and another video that shows the script running.
 
 ****** Activity Diagram
-[[http://www.marcolancini.it/images/projects/aoss/activity_cv.png]]
+[[http://www.marcolancini.it/static/assets/projects/aoss/activity_cv.png]]
 
 ****** Screenshot of the running script
-[[http://www.marcolancini.it/images/projects/aoss/screenshot.png]]
+[[http://www.marcolancini.it/static/assets/projects/aoss/screenshot.png]]
 
 
 
@@ -56,10 +56,10 @@ AOSS provides users two ways to use, accessible via a menu:
 In the *android_app* folder there's the source code of the app and the pre-compiled APK ready to be installed.
 
 ****** Activity Diagram
-[[http://www.marcolancini.it/images/projects/aoss/activity_app.png]]
+[[http://www.marcolancini.it/static/assets/projects/aoss/activity_app.png]]
 
 ****** Screenshots
-[[http://www.marcolancini.it/images/projects/aoss/app_menu.png]] [[http://www.marcolancini.it/images/projects/aoss/app_on.png]]
+[[http://www.marcolancini.it/static/assets/projects/aoss/app_menu.png]] [[http://www.marcolancini.it/static/assets/projects/aoss/app_on.png]]
 
 
 ** Copyright and License
