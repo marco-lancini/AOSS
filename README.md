@@ -1,5 +1,9 @@
 * AOSS
 
+![status](http://b.repl.ca/v1/status-completed-red.png "status") 
+![build](http://b.repl.ca/v1/build-passing-brightgreen.png "build")  
+
+
 AOSS (Android-OpenCV Sound Synthesizer) is an Android app, developed for the Image Analysis course at [[http://www.polimi.it][Politecnico di Milano]], that uses the OpenCV libraries to determine the distance between two objects taken by the camera of the phone; distance which will modulate the frequency of the sound produced by the audio synthesizer embedded into the application. 
 
 The aim was indeed to use the output of a process of Computer Vision, as the distance between two objects taken from the device, as input to a subsequent process of audio manipulation, which is an audio synthesizer.
